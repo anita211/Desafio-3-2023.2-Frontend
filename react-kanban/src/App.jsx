@@ -15,23 +15,12 @@ import Cancel from './assets/cancel.png';
 import Check from './assets/check.png';
 import Plus from './assets/plus.png';
 
-const item = {
-  id: v4(),
-  name: "Título da tarefa",
-  avatar: <img src={Icon} className="icon"/>,
-  author:"Responsável",
-  cal: <img src={Calendar} className="icon"/>,
-  date: "dd/mm/aaaa",
-  description: "Descrição",
-  column: "A Fazer",
-};
-
 function App() {
   
   const [state, setState] = useState({
     todo: {
       title: 'A Fazer',
-      items: [item],
+      items: [],
     },
     inProgress: {
       title: 'Fazendo',
