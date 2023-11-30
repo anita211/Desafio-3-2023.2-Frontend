@@ -1,0 +1,303 @@
+* {
+    box-sizing: border-box;
+    background: #3A3A3A;
+  }
+  
+  .App {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    border-radius: 15px;
+    border: 1.125rem solid #969696;
+    margin: 2rem;
+    padding: 1rem;
+    width: 100%;
+    min-height: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+  }
+  
+  /* Estilização das colunas */
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    height: 100%;
+    border-right: 2px solid #969696;
+    position: relative;
+  
+    color: #FFF;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .column.last-column {
+    border-right: none;
+  }
+  
+  .title-divider {
+    margin: 1px 0;
+    width: 100%;
+  }
+  
+  /* Estilização dos cards */
+  
+  .droppable-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 56vh;
+    border-radius: 15px;
+    position: relative;
+  }
+  
+  .item {
+    flex: 1 0 auto;
+    user-select: none;
+    margin: 1.75rem ;
+    padding: 0.25rem;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    min-width: 21rem;
+    max-width: 21rem;
+    min-height: 6.75rem;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: rgba(66, 80, 100, 0.39);
+  
+    color: #FFF;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  .item:hover {
+    opacity: 0.8;
+  }
+  
+  .item.dragging {
+    background: coral;
+  }
+  
+  /* Estilização do conteúdo dos cards */
+  
+  .icon {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  
+  .task-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 10px;
+    background-color: rgba(66, 80, 100, 0.39);
+  }
+  
+  .horizontal-divider {
+    margin: 0.5rem;
+    width: 92%;
+    background: rgba(66, 80, 100, 0.39);
+  }
+  
+  .task-details {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0;
+    background: rgba(66, 80, 100, 0.39);
+  }
+  
+  .container-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 0.5rem;
+    background: rgba(66, 80, 100, 0.39);
+  }
+  
+  .line {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1vh;
+    margin-bottom: 0.5rem;
+    padding: 0%;
+    background: rgba(66, 80, 100, 0.39);
+  }
+  
+  .task-icon {
+    height: 4vh;
+    width: 4vh;
+  }
+  
+  .vertical-divider {
+    min-height: 10rex;
+    width: 1px;
+    background-color: #ddd;
+    margin: 0 0.5rem;
+  }
+  
+  .task-author,
+  .task-date,
+  .task-description {
+    width: 7rem;
+    height: fit-content;
+    font-size: 1rem;
+    background: rgba(66, 80, 100, 0.39);
+  }
+  
+  .task-description {
+    overflow: hidden;
+    word-wrap: break-word;
+    white-space: pre-line;
+  }
+  
+  /* Estilização do botão de adição */
+  
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem;
+    width: 20.85rem;
+    height: 3rem;
+    border-radius: 15px;
+    border: none;
+    background-color: rgba(66, 80, 100, 0.39);
+    cursor: pointer;
+  }
+  
+  .plus {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    background-color: rgba(66, 80, 100, 0.39);
+  }
+  
+  /*Estilização de novas cards*/
+  
+  .new-item {
+    flex: 1 0 auto;
+    margin: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    width: 88%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-self: center;
+    background-color: rgba(66, 80, 100, 0.39);
+  }
+  
+  input {
+    border: none;
+    background-color: rgba(66, 80, 100, 0.39);
+    color: #FFF;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    
+  }
+  
+  .new-task-title {
+    align-self: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .new-line {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 15rem;
+    gap: 1vh;
+    margin-bottom: 0.5rem;
+    padding: 0%;
+    background: rgba(66, 80, 100, 0.39);
+  }
+  
+  .new-vertical-divider {
+    min-height: 10rex;
+    width: 1px;
+    background-color: #ddd;
+    margin: 0 -5rem;
+  }
+  
+  .new-author,
+  .new-task-date,
+  .new-task-description {
+    font-size: 1rem;
+    width:8rem;
+    background: rgba(66, 80, 100, 0.39);
+    color: rgba(255, 255, 255, 0.42);
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;  
+  }
+  
+  .new-task-description {
+    width: 39%;
+    height: 4rem;
+    position: relative;
+    right: -5.5rem;
+  }
+  
+  .new-task-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 0.1rem;
+    width: 100%;
+    border-radius: 15px;
+    border: none;
+    background-color: rgba(66, 80, 100, 0.39);
+    cursor: pointer;
+  }
+  
+  .btn-submit {
+    display: flex;
+    align-items: space-between;
+    justify-content: center;
+    width: 40%;
+    height: 2.5rem;
+    border: none;
+    background-color: rgba(66, 80, 100, 0.39);
+    cursor: pointer;
+  }
+  
+  .check,
+  .cancel {
+    height: 1.4rem;
+    width: 1.5rem;
+    cursor: pointer;
+    background-color: rgba(66, 80, 100, 0.39);
+  }
+  
